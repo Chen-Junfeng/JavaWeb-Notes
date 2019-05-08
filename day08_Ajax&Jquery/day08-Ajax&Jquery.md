@@ -1,6 +1,6 @@
-#Ajax & Jquery
+# Ajax & Jquery
 
-##Ajax
+## Ajax
 
 * 是什么?
 
@@ -18,7 +18,7 @@
 > 咱们的网页如果想要刷新局部内容。 那么需要重新载入整个网页。用户体验不是很好。  就是为了解决局部刷新的问题。 保持其他部分不动，只刷新某些地方。 
 
 
-##数据请求 Get
+## 数据请求 Get
 
 
 	1.创建对象
@@ -92,7 +92,7 @@
 	}
 
 
-##数据请求 Post
+## 数据请求 Post
 
 
 ​		
@@ -168,9 +168,9 @@
 		}
 
 
-##校验用户名是否可用
+## 校验用户名是否可用
 
-###1. 搭建环境
+### 1. 搭建环境
 
 1. 页面准备
 
@@ -201,7 +201,7 @@
 
 2. 数据库准备
 
-###2. Servlet代码
+### 2. Servlet代码
 
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
@@ -227,7 +227,7 @@
 		}
 	}
 
-###3. Dao代码
+### 3. Dao代码
 
 
 		public class UserDaomImpl implements UserDao{
@@ -247,7 +247,7 @@
 		
 		}
 
-###jsp页面显示
+### jsp页面显示
 
 
 ​		
@@ -283,7 +283,7 @@
 	}
 
 
-##JQuery
+## JQuery
 
 * 是什么?
 
@@ -298,7 +298,7 @@
 > write less do more , 写得更少，做的更多。 
 
 
-###load
+### load
 
 	<a href="" onclick="load()">使用JQuery执行load方法</a>
 
@@ -312,7 +312,7 @@
 		}); 
 
 
-###Get
+### Get
 
 
 	$.get("/day16/DemoServlet02"  , function(data ,status) {
@@ -320,7 +320,7 @@
 		});
 
 
-#赋值显示
+# 赋值显示
 
 * val("aa"); 
 
@@ -331,7 +331,7 @@
 > 其实没有什么区别，如果想针对这分数据做html样式处理，那么只能用html()
 
 
-###load & get
+### load & get
 
 
 * load
@@ -359,7 +359,7 @@
 			});
 		}
 
-###使用JQuery去实现校验用户名
+### 使用JQuery去实现校验用户名
 
 		function checkUserName() {
 			//1. 获取输入框的内容
@@ -382,7 +382,7 @@
 
 ## 实现百度搜索提示
 
-###搭建环境
+### 搭建环境
 
 1. 定义首页
 
@@ -399,7 +399,7 @@
 2. 定义数据库
 
 
-###捕获键盘弹起
+### 捕获键盘弹起
 
 $(function(){
 	$("#word").keyup(function() {
@@ -408,7 +408,7 @@ $(function(){
 });
 
 
-###JS请求
+### JS请求
 
 
 	$(function(){
@@ -433,7 +433,7 @@ $(function(){
 	});
 
 
-###Servlet代码
+### Servlet代码
 
 			protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -463,7 +463,7 @@ $(function(){
 		
 		}
 
-###list.jsp
+### list.jsp
 
 		<%@ page language="java" contentType="text/html; charset=UTF-8"
 		    pageEncoding="UTF-8"%>
@@ -480,9 +480,9 @@ $(function(){
 		</table>
 
 
-##使用JQuery实现 省市联动
+## 使用JQuery实现 省市联动
 
-###环境准备
+### 环境准备
 
 1. 准备数据库
 
@@ -507,7 +507,7 @@ $(function(){
 			</body>
 
 
-###XStream的使用
+### XStream的使用
 
 		//3. 返回数据。手动拼  ---> XStream  转化 bean对象成 xml
 			XStream xStream = new XStream();
@@ -522,7 +522,7 @@ $(function(){
 			String xml = xStream.toXML(list);
 
 
-###JS代码
+### JS代码
 
 
 		$(function() {
@@ -566,7 +566,7 @@ $(function(){
 		});
 	});
 
-##服务器和客户端数据传输的方式
+## 服务器和客户端数据传输的方式
 
 * xml
 
@@ -670,9 +670,9 @@ $(function(){
 		});
 
 
-##总结
+## 总结
 
-###Ajax  
+### Ajax  
 
 	发送get请求
 
@@ -680,7 +680,7 @@ $(function(){
 
 	都要求带数据 + 获取数据＋　放置到元素上。
 
-###JQuery
+### JQuery
 
 
 	发送get请求
